@@ -8,21 +8,19 @@ export function Typewritter() {
     const tagline = useTypedTagline(taglines);
 
     return (
-        <section className="container mx-auto">
-            <h1>
-                <p className="blinking-cursor">
-                    Hi there! My name is{" "}
-                    <i>
-                        <b>Kenzi,</b>
-                    </i>
-                    <br />
-                    I'm a{" "}
-                    <b>
-                        <span className="text-cyan-400">{tagline}</span>
-                    </b>
-                    .
-                </p>
-            </h1>
-        </section>
+        <h1>
+            <p className="blinking-cursor text-white">
+                Hi there! My name is{" "}
+                <i>
+                    <b>Kenzi,</b>
+                </i>
+                <br />
+                I'm a{" "}
+                <span className="text-cyan-400">
+                    <b>{tagline}</b>
+                </span>
+                .
+            </p>
+        </h1>
     );
 }
