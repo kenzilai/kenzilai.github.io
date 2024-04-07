@@ -2,18 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    h1 {
-        @apply text-2xl;
-    }
-    h2 {
-        @apply text-xl;
-    }
-}
-
 @layer components {
     .blinking-cursor:after {
-        content: '|';
+        content: "|";
         animation: blink 1s step-start infinite;
     }
     @keyframes blink {
