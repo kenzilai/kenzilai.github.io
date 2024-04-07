@@ -2,25 +2,18 @@
 
 import { useTypedTagline } from "@/utils/useTypedTagline";
 
-const taglines = ["Software Engineer", "3D Artist"];
+const taglines = ["Kenzi", "Software Engineer", "3D Artist"];
 
 export function Typewritter() {
     const tagline = useTypedTagline(taglines);
 
     return (
-        <h1>
-            <p className="blinking-cursor text-white">
-                Hi there! My name is{" "}
-                <i>
-                    <b>Kenzi,</b>
-                </i>
-                <br />
-                I'm a{" "}
-                <span className="text-cyan-400">
-                    <b>{tagline}</b>
-                </span>
-                .
-            </p>
+        <h1 className="blinking-cursor p-6 text-4xl font-extrabold text-white">
+            Hi there! I'm
+            <br />
+            <span className="text-cyan-400">
+                <b>{tagline}</b>
+            </span>
         </h1>
     );
 }
