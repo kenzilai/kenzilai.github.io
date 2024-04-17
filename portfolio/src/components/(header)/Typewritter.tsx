@@ -1,6 +1,6 @@
 "use client";
 
-import { useTypedTagline } from "@/utils/useTypedTagline";
+import { useTypedTagline } from "@/utils/hooks/useTypedTagline";
 
 const taglines = ["Kenzi", "Software Engineer", "3D Artist"];
 
