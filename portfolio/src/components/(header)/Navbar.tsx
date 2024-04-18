@@ -8,7 +8,7 @@ export function Navbar() {
                     <Link className="hover:text-cyan-400" href="#about">
                         About
                     </Link>
-                    <Link className="hover:text-cyan-400" href="#">
+                    <Link className="hover:text-cyan-400" href="#skills">
                         Skills
                     </Link>
                     <Link className="hover:text-cyan-400" href="#">
