@@ -7,63 +7,62 @@ enum Phase {
 }
 
 const TYPING_INTERVAL = 50;
-const PASUING_TIME = 1000;
+const PASUING_TIME = 2000;
 const DELETING_INTERVAL = 30;
 
 export function useTypedTagline(taglines: string[]) {
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(0);
     const [phase, setPhase] = useState(Phase.Typing);
-    const [typedTagline, setTypedTagline] = useState('');
+    const [typedTagline, setTypedTagline] = useState("");
     useEffect(() => {
-        switch(phase) {
+        switch (phase) {
             case Phase.Typing: {
                 const nextTagline = taglines[index].slice(
                     0,
-                    typedTagline.length + 1
-                )
+                    typedTagline.length + 1,
+                );
 
                 if (nextTagline === typedTagline) {
-                    setPhase(Phase.Pausing)
+                    setPhase(Phase.Pausing);
                     return;
                 }
-                
-                const timeout = setTimeout(() => {
-                    setTypedTagline(nextTagline)
-                }, TYPING_INTERVAL)
 
-                return (() => clearTimeout(timeout));
+                const timeout = setTimeout(() => {
+                    setTypedTagline(nextTagline);
+                }, TYPING_INTERVAL);
+
+                return () => clearTimeout(timeout);
             }
 
             case Phase.Deleting: {
-                
                 if (!typedTagline) {
                     const nextIndex = index + 1;
-                    setIndex(taglines[nextIndex] ? nextIndex : 0)
-                    setPhase(Phase.Typing)
+                    setIndex(taglines[nextIndex] ? nextIndex : 0);
+                    setPhase(Phase.Typing);
                     return;
                 }
 
                 const nextRemaining = taglines[index].slice(
                     0,
-                    typedTagline.length - 1
-                )
-                
-                const timeout = setTimeout(() => {
-                    setTypedTagline(nextRemaining)
-                }, DELETING_INTERVAL)
+                    typedTagline.length - 1,
+                );
 
-                return (() => clearTimeout(timeout));
+                const timeout = setTimeout(() => {
+                    setTypedTagline(nextRemaining);
+                }, DELETING_INTERVAL);
+
+                return () => clearTimeout(timeout);
             }
 
             case Phase.Pausing:
             default:
                 const timeout = setTimeout(() => {
-                    setPhase(Phase.Deleting)
-                }, PASUING_TIME)
+                    setPhase(Phase.Deleting);
+                }, PASUING_TIME);
 
-                return (() => clearTimeout(timeout));
+                return () => clearTimeout(timeout);
         }
-    }, [taglines, typedTagline, phase, index])
+    }, [taglines, typedTagline, phase, index]);
 
     return typedTagline;
 }
