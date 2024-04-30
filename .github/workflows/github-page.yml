@@ -51,7 +51,7 @@ jobs:
                     echo "Unable to determine package manager"
                     exit 1
                   fi
-              working-directory: portfolio
+              working-directory: ./portfolio
 
             - name: Setup Node
               uses: actions/setup-node@v4
