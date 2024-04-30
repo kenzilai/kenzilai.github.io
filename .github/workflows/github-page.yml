@@ -101,4 +101,5 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
-              working-directory: portfolio/out
+              with:
+                  path: portfolio/out
