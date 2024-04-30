@@ -25,7 +25,7 @@ export default function Projects() {
                             Portfolio Website
                         </div>
                         <p className="text-base text-gray-700">
-                            Host on GitHub Page
+                            Host on Vercel
                         </p>
                     </div>
                     <div className="flex gap-1 px-6 py-4">
