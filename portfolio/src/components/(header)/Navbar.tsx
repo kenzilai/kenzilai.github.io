@@ -11,11 +11,8 @@ export function Navbar() {
                     <Link className="hover:text-cyan-400" href="#skills">
                         Skills
                     </Link>
-                    <Link className="hover:text-cyan-400" href="#">
+                    <Link className="hover:text-cyan-400" href="#projects">
                         Projects
-                    </Link>
-                    <Link className="hover:text-cyan-400" href="#">
-                        Experience
                     </Link>
                     <Link href="https://github.com/kenzilai">
                         <svg
