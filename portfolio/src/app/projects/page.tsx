@@ -22,10 +22,10 @@ export default function Projects() {
                     </Link>
                     <div className="px-6 py-4">
                         <div className="mb-2 text-xl font-bold">
-                            Portfolio Website
+                            Personal Website
                         </div>
                         <p className="text-base text-gray-700">
-                            Host on Vercel
+                            A website for my portfolio and personal branding
                         </p>
                     </div>
                     <div className="flex gap-1 px-6 py-4">
