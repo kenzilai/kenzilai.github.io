@@ -7,8 +7,9 @@ export default function About() {
             <main className="py-5 text-xl">
                 <p>
                     My journey began with a curious mind in{" "}
-                    <b className="text-cyan-500">Game Development</b> and a
-                    thirst for knowledge in{" "}
+                    <b className="text-cyan-500">3D Modeling</b> and{" "}
+                    <b className="text-cyan-500">Game Development</b>, as well
+                    as a thirst for knowledge in{" "}
                     <b className="text-cyan-500">Programming</b>. Driven by my
                     passion, I earned my bachelor's degree in Computer Graphics.
                 </p>
@@ -22,7 +23,7 @@ export default function About() {
                     Graphics alone weren't sufficient for my goals, so I
                     enrolled in an intensive Coding Bootcamp. Through this
                     experience, I discovered the joy of Web development and
-                    realized transferable nature of the programming skill.
+                    realized the transferable nature of programming skill.
                 </p>
                 <br />
                 <p>
